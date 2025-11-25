@@ -1,39 +1,86 @@
 # Ex.No:3(b) POLYMORPHISM
 
 ## QUESTION:
+Write a Java program that calculates the area of different shapes using method overloading. Create a class AreaCalculator with:
+
+area(int side) for square
+
+area(int length, int breadth) for rectangle
+
+area(double radius) for circle
+
+
+<img width="447" height="180" alt="image" src="https://github.com/user-attachments/assets/bffdcdcf-d377-4b2e-9e18-78b5d63107d8" />
 
 
 ## AIM:
+Create an AreaCalculator class using method overloading to calculate areas of a square, rectangle, and circle.
 
 
 ## ALGORITHM :
-1.	Start the program.
-2.	Import the necessary package 'java.util'
-3.	
+1.Start and import Scanner.
 
+2.Create prog class with overloaded area() methods for square, rectangle, and circle.
 
+3.Read side, length & breadth, and radius from the user.
 
+4.Call the appropriate area() method for each shape.
 
+5.Display the areas and end the program.
 
 ## PROGRAM:
  ```
 /*
 Program to implement a Polymorphism using Java
-Developed by: 
-RegisterNumber:  
+Developed by: Thanika Sree B
+RegisterNumber: 212222100055 
 */
 ```
 
 ## SOURCE CODE:
+```
+import java.util.Scanner;
 
+class prog {
 
+    void area(int side) {
+        System.out.println("Area of square: " + (side * side));
+    }
 
+    void area(int length, int breadth) {
+        System.out.println("Area of rectangle: " + (length * breadth));
+    }
 
+    void area(double radius) {
+        double result = Math.PI * radius * radius;
+        System.out.println("Area of circle: " + result);
+    }
 
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        prog obj = new prog();
 
+        int side = sc.nextInt();
+        obj.area(side);
 
+        int length = sc.nextInt();
+        int breadth = sc.nextInt();
+        obj.area(length, breadth);
+
+        double radius = sc.nextDouble();
+        obj.area(radius);
+
+        sc.close();
+    }
+}
+```
 ## OUTPUT:
 
 
+<img width="825" height="372" alt="image" src="https://github.com/user-attachments/assets/419c3e6f-af25-451a-8e54-10ff1aa5f08d" />
+
 
 ## RESULT:
+The program displays the area of the chosen shape based on the input values.
+
+
